@@ -1,9 +1,8 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="publicApp">
 <head>
     <meta charset="utf-8" />
     <title>Brent's ACT Guide</title>
-
 
     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
 
@@ -12,6 +11,23 @@
 
     <h1 class="jumbotron text-center">Hello from index</h1>
 
+    <div ui-view>
+
+    </div>
+
+    <!-- Jquery -->
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="/Scripts/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="/Scripts/angular-ui-router.min.js"></script>
+
+    <!-- Other -->
+    <script src="/Scripts/app.public.js"></script>
+    <script src="/Scripts/app.routes.js"></script>
 
 
 </body>
