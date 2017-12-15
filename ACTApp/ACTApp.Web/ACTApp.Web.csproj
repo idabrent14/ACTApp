@@ -215,6 +215,9 @@
   <ItemGroup>
     <Content Include="app\home.html" />
     <Content Include="app\index.html" />
+    <Content Include="app\register\register.html" />
+    <Content Include="Scripts\register\register.controller.js" />
+    <Content Include="Scripts\register\register.service.js" />
     <Content Include="Content\angular-material.css" />
     <Content Include="Content\angular-material.layout-attributes.css" />
     <Content Include="Content\angular-material.layout-attributes.min.css" />

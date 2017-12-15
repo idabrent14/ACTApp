@@ -15,7 +15,6 @@ namespace ACTApp.Web.Controllers.Api
         [HttpPost]
         public HttpResponseMessage Insert(RegisterModel newUser)
         {
-
             try
             {
                 RegisterService svc = new RegisterService();

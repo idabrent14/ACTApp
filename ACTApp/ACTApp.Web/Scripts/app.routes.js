@@ -17,7 +17,14 @@
                 name: 'home',
                 url: '/home',
                 templateUrl: 'app/home.html',
-                home: 'home'
+                title: 'home'
+            })
+            .state({
+                name: 'register',
+                url: '/register',
+                templateUrl: 'app/register/register.html',
+                title: 'register',
+                controller: 'registerController as registerCtrl'
             })
 
     }
