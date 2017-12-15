@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACTApp.Web", "ACTApp.Web\ACTApp.Web.csproj", "{91881496-6A9B-40BD-949B-6D8A3A0D82B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACTApp.Services", "ACTApp.Services\ACTApp.Services.csproj", "{6BDB2FBF-3DA2-49EF-908A-89EDFCACF767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACTApp.Models", "ACTApp.Models\ACTApp.Models.csproj", "{A41D066B-0D61-4174-AD54-9D3DA82CC765}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{91881496-6A9B-40BD-949B-6D8A3A0D82B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91881496-6A9B-40BD-949B-6D8A3A0D82B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91881496-6A9B-40BD-949B-6D8A3A0D82B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BDB2FBF-3DA2-49EF-908A-89EDFCACF767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BDB2FBF-3DA2-49EF-908A-89EDFCACF767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BDB2FBF-3DA2-49EF-908A-89EDFCACF767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BDB2FBF-3DA2-49EF-908A-89EDFCACF767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A41D066B-0D61-4174-AD54-9D3DA82CC765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41D066B-0D61-4174-AD54-9D3DA82CC765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41D066B-0D61-4174-AD54-9D3DA82CC765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41D066B-0D61-4174-AD54-9D3DA82CC765}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
