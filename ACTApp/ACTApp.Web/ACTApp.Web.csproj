@@ -200,6 +200,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\RegisterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -214,6 +215,9 @@
   <ItemGroup>
     <Content Include="app\home.html" />
     <Content Include="app\index.html" />
+    <Content Include="app\register\register.html" />
+    <Content Include="Scripts\register\register.controller.js" />
+    <Content Include="Scripts\register\register.service.js" />
     <Content Include="Content\angular-material.css" />
     <Content Include="Content\angular-material.layout-attributes.css" />
     <Content Include="Content\angular-material.layout-attributes.min.css" />
@@ -313,6 +317,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ACTApp.Models\ACTApp.Models.csproj">
+      <Project>{a41d066b-0d61-4174-ad54-9d3da82cc765}</Project>
+      <Name>ACTApp.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACTApp.Services\ACTApp.Services.csproj">
+      <Project>{6bdb2fbf-3da2-49ef-908a-89edfcacf767}</Project>
+      <Name>ACTApp.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
