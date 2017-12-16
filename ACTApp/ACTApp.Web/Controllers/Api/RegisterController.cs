@@ -19,7 +19,7 @@ namespace ACTApp.Web.Controllers.Api
             {
                 RegisterService svc = new RegisterService();
                 int id = svc.RegisterUser(newUser);                
-                return Request.CreateResponse(HttpStatusCode.OK, id); ;
+                return Request.CreateResponse(HttpStatusCode.OK, id); 
             }
             catch (Exception e)
             {
