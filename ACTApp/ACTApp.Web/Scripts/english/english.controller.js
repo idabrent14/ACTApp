@@ -16,18 +16,22 @@
         vm.resetTimer = _resetTimer;
         vm.displayTime = _displayTime;
         vm.okClicked = _okClicked;
-
         vm.start = true;
         vm.stop = false;
         vm.resume = false;
         vm.reset = false;
         vm.lap = false;
-
-        vm.secondsPassed = 0;
-        vm.showSeconds = 0;
+        vm.secondsPassed = 0; //this is a live representation of how many seconds have passed
+        vm.minutesPassed = 0; //this is a live representation of how many minutes have passed
+        vm.showTime = []; 
 
         function _displayTime() {
-            vm.showSeconds = vm.secondsPassed;
+            //push this object to an array as a way to iterate through tww arrays using ngrepeat
+            var timeObject = {
+                seconds: vm.secondsPassed,
+                minutes: vm.minutesPassed,
+            };
+            vm.showTime.push(timeObject);
         }
 
         function _startTimer () {
@@ -78,6 +82,7 @@
 
         $scope.$on('timer-tick', function (event, data) {
             vm.secondsPassed = data.seconds;
+            vm.minutesPassed = data.minutes;
             if (data.seconds === 10) {
                 $mdDialog.show({
                     contentElement: "#timeAlert",
@@ -90,9 +95,6 @@
         function _okClicked() {
             $mdDialog.cancel();
         }
-
-
-
 
     }
 })();

@@ -2,8 +2,15 @@
 <style>
     /*targets the timer*/
     #timerInfo {
-        font-size: 20px;
+        font-size: 50px;
+        margin-top: 100px;
     }
+
+    #englishButtons {
+        margin-top: 25px;
+    }
+
+
 </style>
 
 
@@ -11,30 +18,36 @@
     <div>
         <h1>English Section</h1>
     </div>
-    <div class="row">
-        <timer interval="1000" autostart="false"><span id="timerInfo">{{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</span></timer>
-    </div>   
-    <div class="row">
-        <button class="btn btn-success" ng-show="englishCtrl.start" ng-click="englishCtrl.startTimer()" ng-disabled="englishCtrl.timerRunning">Start Timer</button>
-        <button class="btn btn-success" ng-show="englishCtrl.resume" ng-click="englishCtrl.resumeTimer()" ng-disabled="englishCtrl.timerRunning">Resume Timer</button>
-        <button class="btn btn-danger" ng-show="englishCtrl.stop" ng-click="englishCtrl.stopTimer()" ng-disabled="!englishCtrl.timerRunning">Stop Timer</button>
-        <button class="btn btn-primary" ng-show="englishCtrl.lap" ng-click="englishCtrl.displayTime()">Complete Passage</button>
-        <button class="btn btn-danger" ng-show="englishCtrl.reset" ng-click="englishCtrl.resetTimer()">Restart Test</button>
+    <div class="row" id="timerInfo">
+        <timer interval="1000" autostart="false"><span>{{minutes}} minutes, {{seconds}} seconds</span></timer>
     </div>
-    {{englishCtrl.showSeconds}}
+    <div class="row" id="englishButtons">
+        <button class="btn btn-success btn-lg " ng-show="englishCtrl.start" ng-click="englishCtrl.startTimer()" ng-disabled="englishCtrl.timerRunning">Start Timer</button>
+        <button class="btn btn-success btn-lg" ng-show="englishCtrl.resume" ng-click="englishCtrl.resumeTimer()" ng-disabled="englishCtrl.timerRunning">Resume Timer</button>
+        <button class="btn btn-danger btn-lg " ng-show="englishCtrl.stop" ng-click="englishCtrl.stopTimer()" ng-disabled="!englishCtrl.timerRunning">Stop Timer</button>
+        <button class="btn btn-primary btn-lg " ng-show="englishCtrl.lap" ng-click="englishCtrl.displayTime()">Complete Passage</button>
+        <button class="btn btn-danger btn-lg " ng-show="englishCtrl.reset" ng-click="englishCtrl.resetTimer()">Restart Test</button>
+    </div>
+    <div ng-repeat="time in englishCtrl.showTime">
+        <h2>Passage{{time.number}} completed: {{time.minutes}}min {{time.seconds}}sec</h2>
+    </div>
 </div>
+
+
+
+
 
 <md-content>
     <div style="visibility: hidden">
         <div class="md-dialog-container" id="timeAlert">
             <md-dialog class="panel">
                 <div class="modal-header">
-                    <h4 class="modal-title">Move on to next passage</h4>
+                    <h1 class="modal-title">Move on to next passage</h1>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-12-xs text-center">
-                            <button class="btn btn-success btn-md" ng-click="englishCtrl.okClicked()">Start next passage</button>
+                            <button class="btn btn-success btn-lg" ng-click="englishCtrl.okClicked(); englishCtrl.displayTime()">Start next passage</button>
                         </div>
                     </div>
                 </div>
@@ -42,4 +55,3 @@
         </div>
     </div>
 </md-content>
-
