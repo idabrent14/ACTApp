@@ -1,0 +1,45 @@
+﻿
+<style>
+    /*targets the timer*/
+    #timerInfo {
+        font-size: 20px;
+    }
+</style>
+
+
+<div class="container text-center">
+    <div>
+        <h1>English Section</h1>
+    </div>
+    <div class="row">
+        <timer interval="1000" autostart="false"><span id="timerInfo">{{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</span></timer>
+    </div>   
+    <div class="row">
+        <button class="btn btn-success" ng-show="englishCtrl.start" ng-click="englishCtrl.startTimer()" ng-disabled="englishCtrl.timerRunning">Start Timer</button>
+        <button class="btn btn-success" ng-show="englishCtrl.resume" ng-click="englishCtrl.resumeTimer()" ng-disabled="englishCtrl.timerRunning">Resume Timer</button>
+        <button class="btn btn-danger" ng-show="englishCtrl.stop" ng-click="englishCtrl.stopTimer()" ng-disabled="!englishCtrl.timerRunning">Stop Timer</button>
+        <button class="btn btn-primary" ng-show="englishCtrl.lap" ng-click="englishCtrl.displayTime()">Complete Passage</button>
+        <button class="btn btn-danger" ng-show="englishCtrl.reset" ng-click="englishCtrl.resetTimer()">Restart Test</button>
+    </div>
+    {{englishCtrl.showSeconds}}
+</div>
+
+<md-content>
+    <div style="visibility: hidden">
+        <div class="md-dialog-container" id="timeAlert">
+            <md-dialog class="panel">
+                <div class="modal-header">
+                    <h4 class="modal-title">Move on to next passage</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12-xs text-center">
+                            <button class="btn btn-success btn-md" ng-click="englishCtrl.okClicked()">Start next passage</button>
+                        </div>
+                    </div>
+                </div>
+            </md-dialog>
+        </div>
+    </div>
+</md-content>
+

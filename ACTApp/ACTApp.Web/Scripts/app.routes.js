@@ -27,11 +27,11 @@
                 controller: 'registerController as registerCtrl'
             })
             .state({
-                name: 'profile',
-                url: '/profile',
-                templateUrl: 'app/profile.html',
-                title: 'profile',
-                controller: 'profileController as profileCtrl'
+                name: 'english',
+                url: '/english',
+                templateUrl: 'app/english.html',
+                title: 'english',
+                controller: 'englishController as englishCtrl'
             })
 
 

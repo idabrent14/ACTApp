@@ -215,8 +215,9 @@
   <ItemGroup>
     <Content Include="app\home.html" />
     <Content Include="app\index.html" />
-    <Content Include="app\profile.html" />
+    <Content Include="app\english.html" />
     <Content Include="app\register.html" />
+    <Content Include="Scripts\english\english.controller.js" />
     <Content Include="Scripts\register\register.controller.js" />
     <Content Include="Scripts\register\register.service.js" />
     <Content Include="Content\angular-material.css" />

@@ -23,12 +23,7 @@ textarea {
     max-width: 280px;
 }
 
-.carousel {
-    position: relative;
-    margin-top: 100px;
-}
-
-#registerForm {
+#pageView {
     margin-top: 150px;
 }
 
