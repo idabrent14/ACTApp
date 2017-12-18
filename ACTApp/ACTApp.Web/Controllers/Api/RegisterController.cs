@@ -1,4 +1,5 @@
 ﻿using ACTApp.Models.domain;
+using ACTApp.Models.responses;
 using ACTApp.Services;
 using System;
 using System.Collections.Generic;
@@ -18,8 +19,9 @@ namespace ACTApp.Web.Controllers.Api
             try
             {
                 RegisterService svc = new RegisterService();
-                int id = svc.RegisterUser(newUser);                
-                return Request.CreateResponse(HttpStatusCode.OK, id); ;
+                ItemResponse<int> resp = new ItemResponse<int>();
+                resp.Item = svc.RegisterUser(newUser);                
+                return Request.CreateResponse(HttpStatusCode.OK, resp); 
             }
             catch (Exception e)
             {

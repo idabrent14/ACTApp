@@ -22,3 +22,28 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#pageView {
+    margin-top: 150px;
+}
+
+.navbar {
+    height: 75px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white !important;
+    margin-top: 15px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #101010;
+    margin-top: 15px;
+    color: red !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white !important;
+}
+
+

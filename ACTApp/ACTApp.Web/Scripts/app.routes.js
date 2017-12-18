@@ -22,10 +22,18 @@
             .state({
                 name: 'register',
                 url: '/register',
-                templateUrl: 'app/register/register.html',
+                templateUrl: 'app/register.html',
                 title: 'register',
                 controller: 'registerController as registerCtrl'
             })
+            .state({
+                name: 'english',
+                url: '/english',
+                templateUrl: 'app/english.html',
+                title: 'english',
+                controller: 'englishController as englishCtrl'
+            })
+
 
     }
 

@@ -200,6 +200,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\EnglishController.cs" />
     <Compile Include="Controllers\Api\RegisterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -215,7 +216,9 @@
   <ItemGroup>
     <Content Include="app\home.html" />
     <Content Include="app\index.html" />
-    <Content Include="app\register\register.html" />
+    <Content Include="app\english.html" />
+    <Content Include="app\register.html" />
+    <Content Include="Scripts\english\english.controller.js" />
     <Content Include="Scripts\register\register.controller.js" />
     <Content Include="Scripts\register\register.service.js" />
     <Content Include="Content\angular-material.css" />
@@ -304,6 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\English\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
