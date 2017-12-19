@@ -218,7 +218,9 @@
     <Content Include="app\index.html" />
     <Content Include="app\english.html" />
     <Content Include="app\register.html" />
+    <Content Include="app\stats.html" />
     <Content Include="Scripts\english\english.controller.js" />
+    <Content Include="Scripts\english\english.Service.js" />
     <Content Include="Scripts\register\register.controller.js" />
     <Content Include="Scripts\register\register.service.js" />
     <Content Include="Content\angular-material.css" />
@@ -270,6 +272,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\smart-table.js" />
+    <Content Include="Scripts\smart-table.min.js" />
+    <Content Include="Scripts\stats\stats.controller.js" />
+    <Content Include="Scripts\stats\stats.service.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -304,6 +310,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\smart-table.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

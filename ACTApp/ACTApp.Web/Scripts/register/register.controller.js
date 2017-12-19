@@ -26,9 +26,5 @@
         function _registerError(res) {
             console.log(res);
         }
-
-
     }
-
-
 })();

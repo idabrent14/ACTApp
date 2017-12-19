@@ -15,7 +15,7 @@ namespace ACTApp.Web.Controllers.Api
     [RoutePrefix("api/english")]
     public class EnglishController : ApiController
     {
-        [HttpPost]
+        [HttpPost][AllowAnonymous]
         public HttpResponseMessage Insert(EnglishModel model)
         {
             try
@@ -31,7 +31,7 @@ namespace ACTApp.Web.Controllers.Api
             }
         }
 
-        [Route("{userId}"), HttpGet]
+        [Route("{userId}"), HttpGet][AllowAnonymous]
         public HttpResponseMessage SelectById(int userId)
         {
             try

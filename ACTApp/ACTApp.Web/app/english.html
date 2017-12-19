@@ -9,6 +9,11 @@
     #englishButtons {
         margin-top: 25px;
     }
+
+    #saveTimesBtn {
+        margin-top: 25px;
+    }
+
 </style>
 
 
@@ -29,6 +34,10 @@
     <div ng-repeat="time in englishCtrl.showTime">
         <h2>Passage{{time.number}} completed: {{time.minutes}}min {{time.seconds}}sec</h2>
     </div>
+    <div class="row" id="saveTimesBtn">
+        <button class="btn btn-success btn-lg" ng-click="englishCtrl.saveTimes()">Save Times</button>
+    </div>
+   
 </div>
 
 <md-content>

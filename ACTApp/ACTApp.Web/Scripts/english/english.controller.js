@@ -4,11 +4,12 @@
         .module('publicApp')
         .controller('englishController', EnglishController);
 
-    EnglishController.$inject = ['$scope', '$mdDialog', '$window'];
+    EnglishController.$inject = ['$scope', '$mdDialog', '$window', 'englishService'];
 
-    function EnglishController($scope, $mdDialog, $window) {
+    function EnglishController($scope, $mdDialog, $window, EnglishService) {
         var vm = this;
         vm.$scope = $scope;
+        vm.englishService = EnglishService;
         vm.timerRunning = false;
         vm.startTimer = _startTimer
         vm.stopTimer = _stopTimer;
@@ -16,6 +17,9 @@
         vm.resetTimer = _resetTimer;
         vm.displayTime = _displayTime;
         vm.okClicked = _okClicked;
+        vm.saveTimes = _saveTimes;
+        vm.postTimesSuccess = _postTimesSuccess;
+        vm.postTimesError = _postTimesError;
         vm.start = true;
         vm.stop = false;
         vm.resume = false;
@@ -94,6 +98,40 @@
 
         function _okClicked() {
             $mdDialog.cancel();
+        }
+
+        function _saveTimes() {
+
+            var numPassages = vm.showTime.length;
+            var incompletePassages = 5 - numPassages 
+            for (var i = 0; i < incompletePassages; i++) {
+                var empty = {
+                    "seconds": '',
+                    "minutes": ''
+                }
+                vm.showTime.push(empty);
+            }
+
+            var times = {
+                "userId": 1,
+                "passage1": vm.showTime[0].minutes + ":" + vm.showTime[0].seconds,
+                "passage2": vm.showTime[1].minutes + ":" + vm.showTime[1].seconds,
+                "passage3": vm.showTime[2].minutes + ":" + vm.showTime[2].seconds,
+                "passage4": vm.showTime[3].minutes + ":" + vm.showTime[3].seconds,
+                "passage5": vm.showTime[4].minutes + ":" + vm.showTime[4].seconds
+            }
+
+            vm.englishService.postTimes(times)
+                .then(vm.postTimesSuccess).catch(vm.postTimesError);
+
+        }
+
+        function _postTimesSuccess(res) {
+            console.log(res);
+        }
+
+        function _postTimesError(res) {
+            console.log(res);
         }
 
     }

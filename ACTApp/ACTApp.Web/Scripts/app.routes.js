@@ -33,6 +33,13 @@
                 title: 'english',
                 controller: 'englishController as englishCtrl'
             })
+            .state({
+                name: 'stats',
+                url: '/stats',
+                templateUrl: 'app/stats.html',
+                title: 'stats',
+                controller: 'statsController as statsCtrl'
+            })
 
 
     }

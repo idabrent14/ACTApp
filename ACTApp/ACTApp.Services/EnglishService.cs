@@ -101,7 +101,7 @@ namespace ACTApp.Services
                     if (!reader.IsDBNull(index))
                     {
                         model.Passage4 = reader.GetString(index++);
-                        if (!reader.IsDBNull(index++))
+                        if (!reader.IsDBNull(index))
                         {
                             model.Passage5 = reader.GetString(index++);
                             return model;
