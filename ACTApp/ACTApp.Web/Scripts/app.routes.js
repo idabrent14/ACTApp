@@ -40,6 +40,14 @@
                 title: 'stats',
                 controller: 'statsController as statsCtrl'
             })
+            .state({
+                name: 'testDates',
+                url: '/testDates',
+                templateUrl: 'app/testDates.html',
+                title: 'testDates',
+                controller: 'testDatesController as testDatesCtrl'
+            })
+
 
 
     }

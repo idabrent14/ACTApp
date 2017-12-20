@@ -202,6 +202,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\EnglishController.cs" />
     <Compile Include="Controllers\Api\RegisterController.cs" />
+    <Compile Include="Controllers\Api\ScraperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -219,6 +220,7 @@
     <Content Include="app\english.html" />
     <Content Include="app\register.html" />
     <Content Include="app\stats.html" />
+    <Content Include="app\testDates.html" />
     <Content Include="Scripts\english\english.controller.js" />
     <Content Include="Scripts\english\english.Service.js" />
     <Content Include="Scripts\register\register.controller.js" />
@@ -276,6 +278,8 @@
     <Content Include="Scripts\smart-table.min.js" />
     <Content Include="Scripts\stats\stats.controller.js" />
     <Content Include="Scripts\stats\stats.service.js" />
+    <Content Include="Scripts\testDates\testDates.controller.js" />
+    <Content Include="Scripts\testDates\testDates.service.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -315,6 +319,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\English\" />
+    <Folder Include="Views\Scraper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

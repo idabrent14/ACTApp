@@ -1,0 +1,36 @@
+﻿<style>
+
+
+    .upcomingDates {
+        font-size: 15px;
+        color: black;
+    }
+
+    md-dialog.md-transition-in {
+        overflow: hidden;
+    }
+</style>
+
+
+
+<md-content>
+    <div style="visibility: hidden">
+        <div class="md-dialog-container" id="showTestDates">
+            <md-dialog class="panel col-md-3">
+                <div class="modal-header">
+                    <h1 class="modal-title">Test Dates</h1>
+                </div>
+                <div class="modal-body">
+                    <table st-table="rowCollection" class="table">
+                        <tbody>
+                            <tr ng-repeat="date in testDatesCtrl.testDates">
+                                <td class="upcomingDates">{{date.Date | date}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" ui-sref="home" class="btn btn-md btn-danger btn-block">Close</button>
+                </div>
+            </md-dialog>
+        </div>
+    </div>
+</md-content>

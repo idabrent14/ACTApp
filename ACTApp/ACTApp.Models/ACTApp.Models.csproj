@@ -48,6 +48,7 @@
     <Compile Include="responses\ItemsResponse.cs" />
     <Compile Include="responses\SuccessResponse.cs" />
     <Compile Include="view\EnglishViewModel.cs" />
+    <Compile Include="view\TestDatesModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

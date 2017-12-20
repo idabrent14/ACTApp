@@ -1,9 +1,4 @@
 ﻿
-<div class="container">
-    <div class="text-center row">
-        <button class="btn btn-primary" ng-click="statsCtrl.showDialog($event); statsCtrl.getStats()">View English Stats</button>
-    </div>
-</div>
 
 <md-content>
     <div style="visibility: hidden">
@@ -33,7 +28,7 @@
                                 <td>{{times.Passage4}}</td>
                                 <td>{{times.Passage5}}</td>
                                 <td>
-                                    <button type="button" ng-click="statsCtrl.delete(time.EnglishId)" class="btn btn-sm btn-danger">
+                                    <button type="button" ng-click="statsCtrl.delete(times.EnglishId)" class="btn btn-sm btn-danger">
                                         <i class="glyphicon glyphicon-trash">
                                         </i>
                                     </button>
@@ -41,6 +36,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <button type="button" ui-sref="home" class="btn btn-md btn-danger col-md-2">Close</button>
                 </div>
             </md-dialog>
         </div>

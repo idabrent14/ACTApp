@@ -22,9 +22,8 @@
         vm.postTimesError = _postTimesError;
         vm.start = true;
         vm.stop = false;
-        vm.resume = false;
-        vm.reset = false;
-        vm.lap = false;
+        vm.reset = true;
+        vm.lap = true;
         vm.secondsPassed = 0; //this is a live representation of how many seconds have passed
         vm.minutesPassed = 0; //this is a live representation of how many minutes have passed
         vm.showTime = []; 
@@ -38,13 +37,19 @@
             vm.showTime.push(timeObject);
         }
 
-        function _startTimer () {
-            $scope.$broadcast('timer-start');
+        function _startTimer() {
+            if (vm.secondsPassed > 0) {
+                $scope.$broadcast('timer-resume');
+                vm.stop = true;
+            }
+            else {
+                $scope.$broadcast('timer-start');
+                vm.stop = true;
+            }
             vm.timerRunning = true;
 
             vm.start = false;
             vm.stop = true;
-            vm.resume = false;
             vm.reset = false;
             vm.lap = true;
         };
@@ -53,7 +58,7 @@
             $scope.$broadcast('timer-stop');
             vm.timerRunning = false;
 
-            vm.start = false;
+            vm.start = true;
             vm.stop = false;
             vm.resume = true;
             vm.reset = true;
@@ -61,7 +66,7 @@
         };
 
         function _resumeTimer() {
-            $scope.$broadcast('timer-resume');
+            
             vm.timerRunning = true;
 
             vm.start = false;
@@ -128,6 +133,7 @@
 
         function _postTimesSuccess(res) {
             console.log(res);
+            vm.resetTimer();
         }
 
         function _postTimesError(res) {
