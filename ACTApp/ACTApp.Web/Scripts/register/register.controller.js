@@ -4,9 +4,9 @@
         .module("publicApp")
         .controller("registerController", RegisterController);
 
-    RegisterController.$inject = ["$scope", "registerService"];
+    RegisterController.$inject = ["$scope", "registerService", "toaster", "$location"];
 
-    function RegisterController($scope, RegisterService) {
+    function RegisterController($scope, RegisterService, toaster, $location) {
         var vm = this;
         vm.$scope = $scope;
         vm.registerService = RegisterService;
@@ -22,6 +22,8 @@
         }
         function _registerSuccess(res) {
             console.log(res);
+            toaster.pop('success', "SUCCESS", "Successfully Registered");
+            $location.path('/login');
         }
         function _registerError(res) {
             console.log(res);

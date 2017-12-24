@@ -1,4 +1,9 @@
-﻿<div class="container">
+﻿<style>
+    .validationText {
+        color: red;
+    }
+</style>
+<div class="container">
     <div class="row" id="registerForm">
         <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-default">
@@ -6,27 +11,31 @@
                     <h1 class="panel-title text-center">Create New Account</h1>
                 </div>
                 <div class="panel-body">
-                    <form accept-charset="UTF-8" role="form">
+                    <form class="text-left" accept-charset="UTF-8" role="form" name="registerForm" ng-submit="registerCtrl.register(registerForm.$valid)">
                         <fieldset>
                             <div class="form-group">
                                 <md-input-container class="col-md-12">
                                     <label>Email</label>
-                                    <input ng-model="registerCtrl.registerUser.email">
+                                    <input ng-model="registerCtrl.registerUser.email" name="email" ng-pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/' required>
+                                    <p class="validationText" ng-show="registerForm.email.$invalid && !registerForm.email.$pristine">A valid email is required</p>
                                 </md-input-container>
                             </div>
                             <div class="form-group">
                                 <md-input-container class="col-md-12">
                                     <label>Password</label>
-                                    <input type="password" ng-model="registerCtrl.registerUser.password">
+                                    <input type="password" name="password" ng-model="registerCtrl.registerUser.password" ng-pattern="/.*[0-9].*/" ng-minlength="6" required>
+                                    <p class="validationText" ng-show="registerForm.password.$error.minlength">Minimum of 6 characters. </p>
+                                    <p class="validationText" ng-show="registerForm.password.$error.pattern">Must include atleast 1 number. </p>
                                 </md-input-container>
                             </div>
                             <div class="form-group">
                                 <md-input-container class="col-md-12">
                                     <label>Confirm Password</label>
-                                    <input type="password" ng-model="registerCtrl.registerUser.password">
-                                </md-input-container>
+                                    <input type="password" name="confirmPass" ng-model="registerCtrl.confirm" ng-pattern="registerCtrl.registerUser.password" required>
+                                    <p class="validationText" ng-show="registerForm.confirmPass.$error.pattern">Passwords Must Match</p>
+                                </md-input-container>                              
                             </div>
-                            <button class="btn btn-lg btn-success btn-block" type="submit" ng-click="registerCtrl.register()">Register</button>
+                            <button class="btn btn-lg btn-success btn-block" ng-disabled="registerForm.$invalid" type="submit">Register</button>
                         </fieldset>
                     </form>
                 </div>

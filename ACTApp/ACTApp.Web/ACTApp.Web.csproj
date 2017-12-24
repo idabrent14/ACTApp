@@ -201,6 +201,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\EnglishController.cs" />
+    <Compile Include="Controllers\Api\LoginController.cs" />
     <Compile Include="Controllers\Api\RegisterController.cs" />
     <Compile Include="Controllers\Api\ScraperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -218,11 +219,14 @@
     <Content Include="app\home.html" />
     <Content Include="app\index.html" />
     <Content Include="app\english.html" />
+    <Content Include="app\login.html" />
     <Content Include="app\register.html" />
     <Content Include="app\stats.html" />
     <Content Include="app\testDates.html" />
     <Content Include="Scripts\english\english.controller.js" />
     <Content Include="Scripts\english\english.Service.js" />
+    <Content Include="Scripts\login\login.controller.js" />
+    <Content Include="Scripts\login\login.service.js" />
     <Content Include="Scripts\register\register.controller.js" />
     <Content Include="Scripts\register\register.service.js" />
     <Content Include="Content\angular-material.css" />
@@ -319,6 +323,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\English\" />
+    <Folder Include="Views\Login\" />
     <Folder Include="Views\Scraper\" />
   </ItemGroup>
   <ItemGroup>

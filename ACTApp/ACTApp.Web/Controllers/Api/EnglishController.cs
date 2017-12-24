@@ -20,6 +20,11 @@ namespace ACTApp.Web.Controllers.Api
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                };
+
                 EnglishService svc = new EnglishService();
                 ItemResponse<int> resp = new ItemResponse<int>();
                 resp.Item = svc.EnglishInsert(model);

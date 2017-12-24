@@ -1,0 +1,31 @@
+﻿<toaster-container toaster-options="{'close-button': true}"></toaster-container>
+<div class="container">
+    <div class="row" id="registerForm">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center btn-block">Login</h1>
+                </div>
+                <div class="panel-body">
+                    <form class="text-left" accept-charset="UTF-8" role="form" name="registerForm" ng-submit="registerCtrl.register(registerForm.$valid)">
+                        <fieldset>
+                            <div class="form-group">
+                                <md-input-container class="col-md-12">
+                                    <label>Email</label>
+                                    <input ng-model="registerCtrl.registerUser.email" name="email" required>                          
+                                </md-input-container>
+                            </div>
+                            <div class="form-group">
+                                <md-input-container class="col-md-12">
+                                    <label>Password</label>
+                                    <input type="password" name="password" ng-model="registerCtrl.registerUser.password" required>
+                                </md-input-container>
+                            </div>
+                            <button class="btn btn-lg btn-success btn-block" ng-disabled="registerForm.$invalid" type="submit">Login</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

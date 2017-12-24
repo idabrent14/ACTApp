@@ -27,6 +27,13 @@
                 controller: 'registerController as registerCtrl'
             })
             .state({
+                name: 'login',
+                url: '/login',
+                templateUrl: 'app/login.html',
+                title: 'login',
+                controller: 'loginController as loginCtrl'
+            })
+            .state({
                 name: 'english',
                 url: '/english',
                 templateUrl: 'app/english.html',

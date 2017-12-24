@@ -4,9 +4,9 @@
         .module('publicApp')
         .controller('englishController', EnglishController);
 
-    EnglishController.$inject = ['$scope', '$mdDialog', '$window', 'englishService'];
+    EnglishController.$inject = ['$scope', '$mdDialog', '$window', 'englishService', "Pubnub"];
 
-    function EnglishController($scope, $mdDialog, $window, EnglishService) {
+    function EnglishController($scope, $mdDialog, $window, EnglishService, Pubnub) {
         var vm = this;
         vm.$scope = $scope;
         vm.englishService = EnglishService;
@@ -92,12 +92,15 @@
         $scope.$on('timer-tick', function (event, data) {
             vm.secondsPassed = data.seconds;
             vm.minutesPassed = data.minutes;
+            
             if (data.seconds === 10) {
+                var theText = 'Move on to Next Passage'
                 $mdDialog.show({
                     contentElement: "#timeAlert",
                     parent: angular.element(document.body),
                     clickOutsideToClose: true
                 });
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance(theText))
             }
         });
 

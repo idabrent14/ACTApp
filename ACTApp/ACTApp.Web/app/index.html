@@ -9,7 +9,7 @@
     <link href="/Content/angular-material.css" rel="stylesheet" />
     <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-
+    <link href="/bower_components/AngularJS-Toaster/toaster.min.css" rel="stylesheet" />
     <!-- template -->
     <link href="/Content/template/ionicons.min.css" rel="stylesheet" />
     <link href="/Content/template/owl.carousel.css" rel="stylesheet" />
@@ -19,8 +19,7 @@
 
 </head>
 <body>
-   
-
+    <toaster-container toaster-options="{'close-button': true, 'position-class': 'toast-bottom-right '}"></toaster-container>
     <section class="header" id="header">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -52,10 +51,24 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true">Stats  <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="a">
+                                        <ul class="nav mega-vertical-nav">
+                                            <li><a href="#" ui-sref="stats">English</a></li>
+                                            <li><a href="#" ui-sref="#">Math</a></li>
+                                            <li><a href="#" ui-sref="#">Reading</a></li>
+                                            <li><a href="#" ui-sref="#">Science</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
                         <li> <a ui-sref="testDates">Test Dates</a> </li>
-                        <li> <a ui-sref="stats">Stats</a> </li>
                         <li> <a ui-sref="register">Register</a> </li>
-                        <li> <a href="#">Login</a> </li>
+                        <li> <a ui-sref="login">Login</a> </li>
                     </ul> <!-- /.nav -->
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
@@ -82,12 +95,16 @@
     <script src="/Scripts/angular-animate.min.js"></script>
     <script src="/Scripts/angular-material.min.js"></script>
     <script src="/Scripts/smart-table.min.js"></script>
+    <script src="/bower_components/AngularJS-Toaster/toaster.min.js"></script>
     <!-- Other -->
     <script src="/Scripts/app.routes.js"></script>
     <script src="/Scripts/app.public.js"></script>
     <!-- register -->
     <script src="/Scripts/register/register.controller.js"></script>
     <script src="../Scripts/register/register.service.js"></script>
+    <!-- login -->
+    <script src="/Scripts/login/login.controller.js"></script>
+    <script src="/Scripts/login/login.service.js"></script>
     <!-- tests -->
     <script src="/Scripts/english/english.controller.js"></script>
     <script src="/Scripts/english/english.Service.js"></script>
@@ -104,8 +121,8 @@
     <script src="/bower_components/moment/min/locales.min.js"></script>
     <script src="/bower_components/humanize-duration/humanize-duration.js"></script>
 
-    <script src="/Scripts/template/owl.carousel.min.js"></script>
-    <script src="/Scripts/template/contact.js"></script>
+    <script src="/bower_components/pubnub/dist/web/pubnub.min.js"></script>
+    <script src="/bower_components/pubnub-angular/dist/pubnub-angular.min.js"></script>
 
 </body>
 </html>

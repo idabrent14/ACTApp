@@ -53,13 +53,5 @@ namespace ACTApp.Services
             }
             return id;
         }
-
-        //private RegisterModel Mapper(SqlDataReader reader)
-        //{
-        //    RegisterModel model = new RegisterModel();
-        //    int index = 0;
-        //    model.Email = reader.GetString(index++);
-        //    return model;
-        //}
     }
 }

@@ -4,7 +4,7 @@
             .module('publicApp')
             .controller('statsController', StatsController);
 
-    StatsController.$inject = ['$scope', 'statsService', '$mdDialog'];
+        StatsController.$inject = ['$scope', 'statsService', '$mdDialog'];
 
     function StatsController($scope, StatsService, $mdDialog) {
         var vm = this;
