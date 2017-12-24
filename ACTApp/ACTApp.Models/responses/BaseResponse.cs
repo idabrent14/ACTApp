@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACTApp.Models.responses
 {
-    public class BaseResponse
+    public abstract class BaseResponse
     {
         public bool IsSuccessful { get; set; }
 

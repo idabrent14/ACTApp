@@ -18,6 +18,10 @@ namespace ACTApp.Web.Controllers.Api
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                };
                 RegisterService svc = new RegisterService();
                 ItemResponse<int> resp = new ItemResponse<int>();
                 resp.Item = svc.RegisterUser(newUser);                

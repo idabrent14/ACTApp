@@ -15,11 +15,16 @@ namespace ACTApp.Web.Controllers.Api
     [RoutePrefix("api/english")]
     public class EnglishController : ApiController
     {
-        [HttpPost]
+        [HttpPost][AllowAnonymous]
         public HttpResponseMessage Insert(EnglishModel model)
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                };
+
                 EnglishService svc = new EnglishService();
                 ItemResponse<int> resp = new ItemResponse<int>();
                 resp.Item = svc.EnglishInsert(model);
@@ -31,7 +36,7 @@ namespace ACTApp.Web.Controllers.Api
             }
         }
 
-        [Route("{userId}"), HttpGet]
+        [Route("{userId}"), HttpGet][AllowAnonymous]
         public HttpResponseMessage SelectById(int userId)
         {
             try

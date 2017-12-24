@@ -1,0 +1,44 @@
+﻿
+
+<md-content>
+    <div style="visibility: hidden">
+        <div class="md-dialog-container" id="showEnglishStats">
+            <md-dialog class="panel col-md-8">
+                <div class="modal-header">
+                    <h1 class="modal-title">English Stats</h1>
+                </div>
+                <div class="modal-body">
+                    <table st-table="rowCollection" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Passage 1</th>
+                                <th>Passage 2</th>
+                                <th>Passage 3</th>
+                                <th>Passage 4</th>
+                                <th>Passage 5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="times in statsCtrl.allTimes">
+                                <td>{{times.CreatedDate | date}}</td>
+                                <td>{{times.Passage1}}</td>
+                                <td>{{times.Passage2}}</td>
+                                <td>{{times.Passage3}}</td>
+                                <td>{{times.Passage4}}</td>
+                                <td>{{times.Passage5}}</td>
+                                <td>
+                                    <button type="button" ng-click="statsCtrl.delete(times.EnglishId)" class="btn btn-sm btn-danger">
+                                        <i class="glyphicon glyphicon-trash">
+                                        </i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" ui-sref="home" class="btn btn-md btn-danger col-md-2">Close</button>
+                </div>
+            </md-dialog>
+        </div>
+    </div>
+</md-content>
