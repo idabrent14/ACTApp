@@ -32,7 +32,7 @@ namespace ACTApp.Web.Controllers.Api
             }
             catch (Exception e)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e.Message);
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
             }
         }
 
@@ -48,7 +48,7 @@ namespace ACTApp.Web.Controllers.Api
             }
             catch(Exception e)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e.Message);
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
             }
         }
 

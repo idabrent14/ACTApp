@@ -110,6 +110,7 @@
 
         function _saveTimes() {
 
+            //Create an object with no times and push it to showTime array for as many times that are null
             var numPassages = vm.showTime.length;
             var incompletePassages = 5 - numPassages 
             for (var i = 0; i < incompletePassages; i++) {
@@ -120,6 +121,7 @@
                 vm.showTime.push(empty);
             }
 
+            //the aove needs to happen first otherwise it cannont read property of null
             var times = {
                 "userId": 1,
                 "passage1": vm.showTime[0].minutes + ":" + vm.showTime[0].seconds,

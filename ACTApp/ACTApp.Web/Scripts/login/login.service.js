@@ -8,11 +8,11 @@
 
     function LoginService($http, $q) {
         return {
-            postTimes: _postTimes
+            login: _login
         }
 
-        function _postTimes(data) {
-            return $http.post("http://localhost:62891/api/english", data, { withCredentials: true })
+        function _login(data) {
+            return $http.post("http://localhost:62891/api/login", data, { withCredentials: true })
                 .then(success).catch(error);
         }
 
