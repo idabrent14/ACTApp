@@ -41,6 +41,27 @@
                 controller: 'englishController as englishCtrl'
             })
             .state({
+                name: 'math',
+                url: '/math',
+                templateUrl: 'app/math.html',
+                title: 'math',
+                controller: 'mathController as mathCtrl'
+            })
+            .state({
+                name: 'reading',
+                url: '/reading',
+                templateUrl: 'app/reading.html',
+                title: 'reading',
+                controller: 'readingController as readingCtrl'
+            })
+            .state({
+                name: 'science',
+                url: '/science',
+                templateUrl: 'app/science.html',
+                title: 'science',
+                controller: 'scienceController as scienceCtrl'
+            })
+            .state({
                 name: 'stats',
                 url: '/stats',
                 templateUrl: 'app/stats.html',

@@ -1,0 +1,36 @@
+﻿<div class="container text-center col-md-8 col-md-offset-2" id="timerContainer">
+    <div class="row" id="timerInfo">
+        <timer interval="1000" autostart="false"><span>{{minutes}} minutes, {{seconds}} seconds</span></timer>
+    </div>
+    <div class="row" id="englishButtons">
+        <button class="btn btn-success btn-circle btn-xl" ng-show="$ctrl.start" ng-click="$ctrl.startTimer()">Start</button>
+        <button class="btn btn-danger btn-circle btn-xl" ng-show="$ctrl.stop" ng-click="$ctrl.stopTimer()">Stop</button>
+        <button class="btn btn-primary btn-circle btn-xl " ng-disable="$ctrl.lap" ng-click="$ctrl.displayTime()">Log</button>
+    </div>
+    <div ng-repeat="time in $ctrl.showTime">
+        <h4 id="loggedTimes">Passage{{time.number}} completed: {{time.minutes}}min {{time.seconds}}sec</h4>
+    </div>
+    <div class="row" id="saveTimesBtn">
+        <button class="btn btn-success btn-lg" ng-click="$ctrl.saveTimes()">Save Times</button>
+        <button class="btn btn-danger btn-lg " ng-disable="$ctrl.reset" ng-click="$ctrl.resetTimer()">Restart Test</button>
+    </div>
+</div>
+
+<md-content>
+    <div style="visibility: hidden">
+        <div class="md-dialog-container" id="timeAlert">
+            <md-dialog class="panel">
+                <div class="modal-header">
+                    <h1 class="modal-title">Time to Move on</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12-xs text-center">
+                            <button class="btn btn-success btn-lg" ng-click="$ctrl.okClicked(); $ctrl.displayTime()">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </md-dialog>
+        </div>
+    </div>
+</md-content>

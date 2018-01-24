@@ -221,13 +221,19 @@
     <Content Include="app\index.html" />
     <Content Include="app\english.html" />
     <Content Include="app\login.html" />
+    <Content Include="app\math.html" />
+    <Content Include="app\reading.html" />
     <Content Include="app\register.html" />
+    <Content Include="app\science.html" />
     <Content Include="app\stats.html" />
     <Content Include="app\testDates.html" />
+    <Content Include="app\timer-details.html" />
     <Content Include="Scripts\english\english.controller.js" />
     <Content Include="Scripts\english\english.Service.js" />
     <Content Include="Scripts\login\login.controller.js" />
     <Content Include="Scripts\login\login.service.js" />
+    <Content Include="Scripts\math\math.controller.js" />
+    <Content Include="Scripts\reading\reading.controller.js" />
     <Content Include="Scripts\register\register.controller.js" />
     <Content Include="Scripts\register\register.service.js" />
     <Content Include="Content\angular-material.css" />
@@ -279,12 +285,16 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\science\science.controller.js" />
     <Content Include="Scripts\smart-table.js" />
     <Content Include="Scripts\smart-table.min.js" />
     <Content Include="Scripts\stats\stats.controller.js" />
     <Content Include="Scripts\stats\stats.service.js" />
     <Content Include="Scripts\testDates\testDates.controller.js" />
     <Content Include="Scripts\testDates\testDates.service.js" />
+    <Content Include="Scripts\timer\timer.component.js" />
+    <Content Include="Scripts\timer\timer.controller.js" />
+    <Content Include="Scripts\timer\timer.service.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
