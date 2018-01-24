@@ -42,10 +42,10 @@
                                 <li>
                                     <div class="a">
                                         <ul class="nav mega-vertical-nav">
-                                            <li><a href="#" ui-sref="english">English</a></li>
-                                            <li><a href="#" ui-sref="#">Math</a></li>
-                                            <li><a href="#" ui-sref="#">Reading</a></li>
-                                            <li><a href="#" ui-sref="#">Science</a></li>
+                                            <li><a ui-sref="english">English</a></li>
+                                            <li><a ui-sref="math">Math</a></li>
+                                            <li><a ui-sref="reading">Reading</a></li>
+                                            <li><a ui-sref="science">Science</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -108,6 +108,12 @@
     <!-- tests -->
     <script src="/Scripts/english/english.controller.js"></script>
     <script src="/Scripts/english/english.Service.js"></script>
+    <script src="/Scripts/math/math.controller.js"></script>
+    <script src="/Scripts/reading/reading.controller.js"></script>
+    <script src="/Scripts/science/science.controller.js"></script>
+    <script src="/Scripts/timer/timer.component.js"></script>
+    <script src="/Scripts/timer/timer.controller.js"></script>
+    <script src="/Scripts/timer/timer.service.js"></script>
     <script src="/Scripts/stats/stats.controller.js"></script>
     <script src="/Scripts/stats/stats.service.js"></script>
     <!-- test dates -->
@@ -120,7 +126,6 @@
     <script src="/bower_components/moment/min/moment.min.js"></script>
     <script src="/bower_components/moment/min/locales.min.js"></script>
     <script src="/bower_components/humanize-duration/humanize-duration.js"></script>
-
     <script src="/bower_components/pubnub/dist/web/pubnub.min.js"></script>
     <script src="/bower_components/pubnub-angular/dist/pubnub-angular.min.js"></script>
 

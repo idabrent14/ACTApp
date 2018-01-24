@@ -48,7 +48,7 @@ namespace ACTApp.Services
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
             {
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand("dbo.EnglishUsers_SelectById", conn))
+                using (SqlCommand cmd = new SqlCommand("dbo.UsersEnglish_SelectById", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Id", userId);

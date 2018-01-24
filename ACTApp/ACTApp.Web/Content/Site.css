@@ -46,4 +46,37 @@ textarea {
     color: white !important;
 }
 
+/*begin timer styling*/
+#timerInfo {
+    font-size: 50px;
+    color: black;
+}
+
+#englishButtons {
+    margin-top: 25px;
+}
+
+#saveTimesBtn {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.btn-circle.btn-xl {
+    width: 80px;
+    height: 80px;
+    padding: 10px 16px;
+    font-size: 20px;
+    line-height: 1.33;
+    border-radius: 40px;
+}
+
+#timerContainer {
+    background: rgba(255, 255, 255, 0.8)
+}
+
+#loggedTimes {
+    color: black;
+}
+
+/*end timer styling*/
 
